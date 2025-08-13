@@ -1,34 +1,35 @@
-<!-- header -->
-<div class="panel">
-    <div class="container">
-      <address>
-        <svg class="icon"><use xlink:href="#pin"></use></svg>
-        <span>{{ current_filial.postal_code }}, {{ current_filial.address|safe }}
-      </address>
-      <div class="time">
-        <svg class="icon"><use xlink:href="#time"></use></svg>
-        {{ current_filial.rezhim }}
-      </div>
-    </div>
-  </div>
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <a href="/"><img src="{{ static_url }}img/logo.svg" alt=""></a>
-      </div>
-      <div class="inner">
-        <div class="h__group_in">
-          <div class="h__group">
-            <a href="tel:{{ current_filial.phone_href }}">{{ current_filial.phone }}</a>
-            <span>Горячая линия</span>
+    <!-- header -->
+
+    <header class="hdr">
+        <div class="row">
+            <div class="container">
+                <div class="info">
+                    <a class="logo" href="https://atomss.ru/"></a>    
+                    
+                    <div class="phone hidden-mob">
+                        <div class="main"><a href="tel:{{ current_filial.phone_href }}">{{ current_filial.phone }}</a></div>
+                        <div class="note">Круглосуточная справка</div>
+                    </div>
+                    
+                    <div class="email hidden-mob">                        
+                        <div class="note">Email: <a href="mailto:{{ current_filial.email }}"><b>{{ current_filial.email }}</b></a></div>
+                    </div>
+                    
+
+                    <div class="order">
+                        <button class="open-modal-order"><b>Онлайн-заявка</b></button>                        
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="container">
+          <!-- NEW -->
+          <div class="hdr-panel">
+            <address>г.Москва, ул. Ленинская Слобода, д. 26, строение 5, офис 5203</address>
+            <div class="time">Пн-Пт с 9.00 до 18.00, Сб и Вс - выходной</div>            
           </div>
-          <div class="h__group">
-            <a href="mail:{{ current_filial.email }}">{{ current_filial.email }}</a>
-            <span>Электронная почта</span>
-          </div>
+          <!--/ NEW -->
         </div>
-        <a href="#form" class="btn">Заказать звонок</a>
-      </div>
-    </div>
-</header>
-<!--/ header -->
+    </header>
+
+<!-- / header -->

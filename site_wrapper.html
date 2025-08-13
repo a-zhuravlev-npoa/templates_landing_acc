@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block site_wrapper %}
-    <div class="wrap">
+    <div class="bg"></div>
+    <div class="wrapper extra-page">
         {% block before_header_tags %}{% endblock %}
-        {% comment %} {% include "element/header.html" %} {% endcomment %}
+        {% include "element/header.html" %}
         {% block content %}{% endblock %}
         {% block after_content_tags %}{% endblock %}
-        {% comment %} {% include "element/footer.html" %} {% endcomment %}
+        {% include "element/footer.html" %}
     </div>
+    {% include "modal/modals.html" %}
     {% include "element/symbols.html" %}
     {% block modal %}{% endblock %}
 {% endblock %}

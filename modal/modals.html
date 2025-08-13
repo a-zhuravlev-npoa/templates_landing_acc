@@ -1,0 +1,399 @@
+<div class="modal">
+    <div class="background"></div>
+    <div class="window">
+        <div class="show-original-image">
+            <div class="close" onclick="closeModalWindow();"></div>
+            <div class="original-image">
+                <img src="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/" alt="">
+                <span></span>
+            </div>
+        </div>
+        <div class="order-form">
+            <div class="close" onclick="closeModalWindow();"></div>
+            <form id="callback_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;callback_form&#39;);">
+                <input type="hidden" name="type" value="Онлайн-заявка" id="order_prod_form_type">
+                <input type="hidden" name="form_type" value="callback_form">
+                <input type="hidden" name="product_name" id="order_prod_form_name" value="">
+
+                <input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">
+                <input type="hidden" name="utm_source" value="">
+                <input type="hidden" name="utm_medium" value="">
+                <input type="hidden" name="utm_campaign" value="">
+                <input type="hidden" name="utm_content" value="">
+                <input type="hidden" name="utm_term" value=""> 
+
+                <div class="title">
+                    <div class="center">Оставить заявку</div>
+                </div>
+                <div class="contacts">
+                    <div class="field">
+                        <label for="name">Имя *</label>
+                        <input type="text" id="name" name="name" placeholder="Иван" required="">
+                    </div>
+                    <div class="field">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" minlength="10" id="phone" name="phone" placeholder="+7 (000) 000-00-00" required="">
+                    </div>
+                    <div class="field">
+                        <label for="email">Почта *</label>
+                        <input type="email" id="email" name="email" placeholder="mail@mail.ru" required="">
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="field">
+                        <label for="comment">Комментарий</label>
+                        <textarea id="comment" placeholder="Напишите пару слов ..." name="comment"></textarea>
+                    </div>
+                </div>
+                <div class="center">
+                    <button onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;online_zayavka&#39;, &#39;zakaz&#39;);)">Оставить заявку</button>
+                </div>
+				<div class="center">
+                   <input type="checkbox" id="agree-pod3" name="agree-pod3" required=""><label for="agree-pod">Нажимая кнопку вы даёте согласие на обработку <a href="https://atomss.ru/menu/popd/">персональных данных</a></label> 
+                </div>
+<div class="center">
+                   <input type="checkbox" id="agree-pod4" name="agree-pod4"><label for="agree-pod"> Я согласен на <a href="https://atomss.ru/menu/soglasie-na-poluchenie-rassylki-reklamno-informacionnyh-materialov/"> получение рассылки рекламно-информационных материалов</a></label> 
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="get-price">
+            <div class="close" onclick="closeModalWindow();"></div>
+            <form id="form_product_get_price" action="javascript:void(0);" onsubmit="get_price_product();ga(&#39;send&#39;, &#39;event&#39;, &#39;uznatcenu&#39;, &#39;click&#39;);">
+                <input type="hidden" name="product_id" id="get_price_product_id" value="">
+                <input type="hidden" name="comment" value="">
+                <input type="hidden" name="name" value="Клиент">
+
+                <input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">
+                <input type="hidden" name="utm_source" value="">
+                <input type="hidden" name="utm_medium" value="">
+                <input type="hidden" name="utm_campaign" value="">
+                <input type="hidden" name="utm_content" value="">
+                <input type="hidden" name="utm_term" value=""> 
+
+                <div class="title">
+                    <div class="center">Оставьте свой телефон и E-mail и мы сообщим вам актуальную цену</div>
+                </div>
+                <div class="row">
+                    <label for="client-phone">Телефон*&nbsp;</label>
+                    <input type="tel" style="width:100%;" id="client-phone" name="phone" minlength="10" placeholder="+7 (000) 000-00-00" required="">
+                </div>
+                <div class="row">
+                    <label for="client-email">Почта&nbsp;*&nbsp;</label>
+                    <input type="email" style="width:100%;" id="client-email" name="email" placeholder="mail@mail.ru" required="">
+                </div>
+                <div class="row">
+                    <label for="button"></label>
+                    <button id="button">Оставить заявку</button>
+                </div>
+				<div class="center">
+                   <div><input type="checkbox" id="agree-pod1" name="agree-pod1" required=""><label for="agree-pod1">Нажимая кнопку вы даёте согласие на обработку <a href="https://atomss.ru/menu/popd/">персональных данных</a></label></div>
+                   <input type="checkbox" id="agree-pod2" name="agree-pod2"><label for="agree-pod2">Я согласен на получение рассылки <a href="https://atomss.ru/menu/soglasie-na-poluchenie-rassylki-reklamno-informacionnyh-materialov/">рекламно-информационных материалов</a></label>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+    
+      <!-- Modal -->
+<div class="modal fade sm-form" id="modal-2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="            
+              document.cookie = &#39;set_filial=True; path=/;&#39;;
+              $(&#39;#modal-2&#39;).modal(&#39;hide&#39;);
+            ">
+        <svg class="icon"><use xlink:href="#close-ico"></use></svg>
+      </button>
+      <form>
+      	<div class="headline text-center">Ваш город Москва? Хотите выбрать металл с доставкой в Москве?</div>  
+      	<div class="row">
+      		<div class="col-lg-6">
+            <a style="cursor:pointer;" class="btn" onclick="            
+              document.cookie = &#39;set_filial=True; path=/;&#39;;
+              $(&#39;#modal-2&#39;).modal(&#39;hide&#39;);
+            ">Да</a></div>
+      		<div class="col-lg-6"><a style="cursor:pointer; color:white;" class="btn red-btn" onclick="$(&#39;#modal-2&#39;).modal(&#39;hide&#39;);$(&#39;#place-modal&#39;).modal();">Нет</a></div>
+      	</div>
+      </form>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Modal -->
+<div class="modal fade" id="place-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <div class="row justify-content-lg-between">
+      	<div class="col-xl-7 col-lg-7">
+      		<div class="headline">Выберите ближайший к вам город</div>
+      		<div class="row city-list">
+			  	
+				<div class="col-md-4">
+					
+						<span class="strong">Е</span>
+						<ul>
+							
+							<li><a href="https://ekb.atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">Екатеринбург</a></li>
+							
+						</ul>
+						
+					
+						<span class="strong">К</span>
+						<ul>
+							
+							<li><a href="https://kzn.atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">Казань</a></li>
+							
+						</ul>
+						
+					
+						<span class="strong">М</span>
+						<ul>
+							
+							<li><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">Москва</a></li>
+							
+						</ul>
+						
+					
+						<span class="strong">Н</span>
+						<ul>
+							
+							<li><a href="https://nsk.atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">Новосибирск</a></li>
+							
+						</ul>
+						
+					
+						<span class="strong">С</span>
+						<ul>
+							
+							<li><a href="https://spb.atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">Санкт-Петербург</a></li>
+							
+						</ul>
+						
+					
+				</div>
+				
+      		</div>      		
+      	</div>
+      	<div class="col-xl-4 col-lg-5">
+      		<ul class="sm-benefits">
+      			<li>
+      				<div class="ico bn-2"><span><svg class="icon"><use xlink:href="#bn-2"></use></svg></span></div>
+      				<span>Доставляем в любой город России</span>
+      			</li>
+      			<li>
+      				<div class="ico bn-10"><span><svg class="icon"><use xlink:href="#bn-10"></use></svg></span></div>
+      				<span>86 складских помещений в России и СНГ</span>
+      			</li>
+      			<li>
+      				<div class="ico bn-12"><span><svg class="icon"><use xlink:href="#bn-12"></use></svg></span></div>
+      				<span>85 000 позиций в наличии</span>
+      			</li>
+      		</ul>
+      	</div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Modal -->
+<div class="modal fade cart-modal" id="cart-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content" id="cart-modal-content">     
+		
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade sm-form" id="modal-3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <form id="order_price_popup_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;order_price_popup_form&#39;);">
+        <input type="hidden" name="name" value="Клиент">
+        <input type="hidden" name="type" value="Подписка на прайс (через 40 секунд на сайте)">
+        <input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value=""> 
+        <input type="hidden" name="form_type" value="order_price_popup_form">
+      	<div class="headline text-center">Подпишитесь, чтобы получать новости и прайс-листы на почту</div>  
+      	<label for="mail-9">E-mail<span class="star">*</span></label>      	
+      	<div class="form-group"><input type="email" name="email" class="form-control" id="mail-9" placeholder="Введите e-mail" required=""></div>      	      			      		
+      	<div class="ch-item mb-4">
+					<input type="checkbox" checked="checked" name="agr-9" id="agr-9" required="">
+					<label for="agr-9">Даю согласие на <a href="https://atomss.ru/menu/politika-obrabotki-personalnyh-dannyh/">обработку персональных данных</a></label>
+				</div>				
+				<button class="btn strange-btn" onclick="if(document.getElementById(&#39;agr-9&#39;).checked==false){alert(&#39;Примите согласие на обработку персональных данных&#39;);return false;};">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+    <!-- Modal -->
+<div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <form>
+      	<div class="headline text-center mb-0" id="modal-thanks-text"></div>        
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-41" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <form>
+      	<div class="headline text-center mb-0">Благодарим за Ваш отзыв!</div>        
+      </form>
+    </div>
+  </div>
+</div>
+    <!-- Modal -->
+<div class="modal fade sm-form" id="modal-7" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <form id="callback_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;callback_form&#39;);yaCounter84529300.reachGoal (&#39;ob-zvonok&#39;);">
+        <input type="hidden" name="name" value="Клиент">
+        <input type="hidden" name="type" value="Заказ звонка">
+        <input type="hidden" name="form_type" value="callback_form">
+		<input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">
+		<input type="hidden" name="utm_source" value="">
+		<input type="hidden" name="utm_medium" value="">
+		<input type="hidden" name="utm_campaign" value="">
+		<input type="hidden" name="utm_content" value="">
+		<input type="hidden" name="utm_term" value=""> 
+      	
+		<div class="headline text-center">Заказать обратный звонок</div> 
+      	<label for="mail-13">Телефон<span class="star">*</span></label>      	
+      	<div class="form-group"><input type="phone" name="phone" maxlength="20" placeholder="Введите номер телефона" class="form-control" id="mail-13" required=""></div>      	      			      		
+      	<label for="comm-13">Комментарий</label>      	
+      	<div class="form-group"><input type="text" name="comment" class="form-control" id="comm-13" placeholder="Комментарий"></div>      	      			      		
+      	<div class="ch-item mb-4">
+					<input type="checkbox" checked="checked" name="agr-13" id="agr-13" required="">
+					<label for="agr-13">Даю согласие на <a href="https://atomss.ru/menu/politika-obrabotki-personalnyh-dannyh/">обработку персональных данных</a></label>
+				</div>				
+				<button class="btn strange-btn" onclick="if(document.getElementById(&#39;agr-13&#39;).checked==false){alert(&#39;Примите согласие на обработку персональных данных&#39;);return false;};">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade" id="calc-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content"> 
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+     	<div class="headline text-center">Металлокалькулятор</div> 
+			<div class="text-center" id="calcus-metal"><iframe id="calcus-iframe-metal" width="100%" height="300" frameborder="0" style="width:1px; min-width: 100%;" scrolling="no" src="{{ static_url }}index_files/kalkulyator-metalla.html"></iframe></div>
+		</div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="complaint" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <form id="complaint_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;complaint_form&#39;);">
+		<input type="hidden" name="type" value="Жалоба">
+		<input type="hidden" name="form_type" value="complaint_form">
+		<input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">
+		<input type="hidden" name="utm_source" value="">
+		<input type="hidden" name="utm_medium" value="">
+		<input type="hidden" name="utm_campaign" value="">
+		<input type="hidden" name="utm_content" value="">
+		<input type="hidden" name="utm_term" value=""> 
+      	<div class="headline text-center">Пожаловаться</div>      	
+      	<label for="num-7">Номер телефона<span class="star">*</span></label>
+      	<div class="form-group has-label">
+					<input type="tel" maxlength="20" name="phone" placeholder="Введите номер телефона" class="form-control" id="num-7" required="">
+					<span class="tel-label">+</span>
+				</div>
+      	<label for="mail-7">E-mail<span class="star">*</span></label>
+      	<div class="form-group"><input type="email" name="email" class="form-control" id="mail-7" placeholder="Введите e-mail" required=""></div>
+      	<label for="name-7">Ваше имя</label>
+      	<div class="form-group"><input type="text" name="name" class="form-control" id="name-7" placeholder="Введите Ваше имя" required=""></div>
+      	<label for="comm-7">Комментарий</label>
+      	<div class="form-group"><input type="text" name="comment" class="form-control" id="comm-7" placeholder="Комментарий"></div>
+      	<div class="ch-item mb-4">
+					<input type="checkbox" checked="checked" name="agr-7" id="agr-7" required="">
+					<label for="agr-7">Даю согласие на <a href="https://atomss.ru/menu/politika-obrabotki-personalnyh-dannyh/">обработку персональных данных</a></label>
+				</div>
+				<button class="btn strange-btn" onclick="if(document.getElementById(&#39;agr-7&#39;).checked==false){alert(&#39;Примите согласие на обработку персональных данных&#39;);return false;};">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade order-prod" id="order-prod" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">     
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
+      <form id="order_prod_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;order_prod_form&#39;);yaCounter84529300.reachGoal (&#39;zakazat-product&#39;);">
+		<input type="hidden" name="name" value="Клиент">
+		<input type="hidden" name="type" id="order_prod_form_type" value="Заказ спецпредложения">
+		<input type="hidden" name="comment" id="order_prod_form_name" value="">
+		<input type="hidden" name="form_type" value="order_prod_form">
+		<input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">
+		<input type="hidden" name="utm_source" value="">
+		<input type="hidden" name="utm_medium" value="">
+		<input type="hidden" name="utm_campaign" value="">
+		<input type="hidden" name="utm_content" value="">
+		<input type="hidden" name="utm_term" value=""> 
+      	<div class="headline text-center">Заказать</div>
+      	<p class="text-center">Оставьте свой телефон и email и мы сообщим Вам актуальную цену</p>
+      	<label for="num-1">Номер телефона<span class="star">*</span></label>
+      	<div class="form-group has-label">
+					<input type="tel" name="phone" maxlength="20" placeholder="Введите номер телефона" class="form-control" id="num-1" required="">
+					<span class="tel-label">+</span>
+				</div>
+      	<label for="mail-2">E-mail<span class="star">*</span></label>
+      	<div class="form-group"><input type="email" name="email" class="form-control" id="mail-2" placeholder="Введите e-mail" required=""></div>
+      	<div class="ch-item mb-4">
+					<input type="checkbox" checked="checked" name="agr-3" id="agr-3" required="">
+					<label for="agr-3">Даю согласие на <a href="https://atomss.ru/menu/politika-obrabotki-personalnyh-dannyh/">обработку персональных данных</a></label>
+				</div>
+				<button class="btn strange-btn" onclick="if(document.getElementById(&#39;agr-3&#39;).checked==false){alert(&#39;Примите согласие на обработку персональных данных&#39;);return false;};">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>
+    <!-- Modal -->
+<div class="modal fade fast-view-modal" id="fast-modal-2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="fast-modal-2-content">     
+
+    </div>
+  </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade price-popup" id="price-popup" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content" id="price-popup-content">     
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade add-product" id="add-product" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content" id="add-product-content">     
+
+    </div>
+  </div>
+</div>
