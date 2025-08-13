@@ -1,0 +1,334 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Для работы функций в IE11
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+    Element.prototype.remove = function() {
+        this.parentElement.removeChild(this);
+    };
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+        for(let i = this.length - 1; i >= 0; i--) {
+            if(this[i] && this[i].parentElement) {
+                this[i].parentElement.removeChild(this[i]);
+            }
+        }
+    };
+
+    productFilter();
+    changeCount();
+    deleteProductCart();
+    mainSlider();
+    openModalOrder();
+    openModalGetPrice();
+    zoom();
+    sliderClassic();
+
+}, false);
+
+
+
+// Фильтрация
+function productFilter() {
+    const filterInputs = document.querySelectorAll('.filter .properties .select-item');
+    filterInputs.forEach(function (item) {
+        item.addEventListener("click", function(e){
+
+            const clickElement = this.parentNode.querySelector('.items ul');
+
+            if (clickElement.style.display === 'block') {
+                this.parentNode.querySelector('.items ul').style.display = 'none';
+            } else {
+                const openMenu = Array.prototype.filter.call(
+                    document.querySelectorAll(".filter .items ul"), function(e){
+                        return e.style.display === "block";
+                    }
+                )[0];
+
+                if (openMenu) {
+                    openMenu.style.display = 'none';
+                }
+                this.parentNode.querySelector('.items ul').style.display = 'block';
+            }
+        }, false);
+    });
+
+    const selectItem = document.querySelectorAll('.filter .properties .items li');
+    selectItem.forEach(function (item) {
+        item.addEventListener("click", function(e){
+            const text = this.innerText;
+            const textBox = this.parentNode.parentNode.parentNode;
+            textBox.querySelector('.select-item').innerText = text;
+            textBox.querySelector('.items ul').style.display = 'none';
+        });
+    });
+
+    const reset = document.querySelector('.filter .reset');
+    if (reset) {
+        reset.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelectorAll('.filter .select-item').forEach(function (item) {
+                item.innerText = 'Все';
+            });
+        });
+    }
+}
+
+
+// Изменение количества
+function changeCount() {
+    const productCountInput = document.querySelector('.order .product__count input[type=number]');
+    const productCountPlus = document.querySelector('.order .count .plus');
+    const productCountMinus = document.querySelector('.order .count .minus');
+
+    if (!productCountMinus || !productCountMinus || !productCountPlus) {
+        return
+    }
+
+    productCountPlus.addEventListener("click", function(){
+        productCountInput.value = Number(productCountInput.value) + 1;
+    });
+
+    productCountMinus.addEventListener("click", function(){
+        const count = Number(productCountInput.value);
+
+        if (count > 1) {
+            productCountInput.value = Number(productCountInput.value) - 1;
+        }
+    });
+}
+
+
+// Удаление товара из корзины
+function deleteProductCart() {
+    const cartProducts = document.querySelectorAll('.cart-page .product .delete');
+    cartProducts.forEach(function (product) {
+        product.addEventListener("click", function(e) {
+            if (confirm('Вы уверены?')) {
+                this.parentElement.remove();
+            }
+        });
+    });
+}
+
+
+// Слайдер на главной странице
+function mainSlider() {
+
+    const mainSliderBlock = document.querySelector('.main-slider');
+    if (!mainSliderBlock) {
+        return;
+    }
+
+    const slideNumberElement = mainSliderBlock.querySelector('nav .number');
+    const slideCountElement = mainSliderBlock.querySelector('nav .count');
+    const nextButton = mainSliderBlock.querySelector('nav .next');
+    const prevButton = mainSliderBlock.querySelector('nav .prev');
+
+    let slideNumber = Number(slideNumberElement.innerText);
+    const slideCount = mainSliderBlock.querySelectorAll('.slide').length;
+
+    if (slideCount === 1) {
+        return;
+    }
+
+    nextButton.addEventListener("click", function(e) {
+        slideNumber++;
+
+        if (slideNumber > slideCount) {
+            slideNumber = 1;
+        }
+
+        slideNumberElement.innerText = slideNumber;
+
+        const activeSlide = mainSliderBlock.querySelector('.active-slide');
+        activeSlide.classList.remove('active-slide');
+
+        if (activeSlide.nextElementSibling) {
+            activeSlide.nextElementSibling.classList.add('active-slide');
+        } else {
+            mainSliderBlock.querySelector('.slide').classList.add('active-slide');
+        }
+    });
+
+    prevButton.addEventListener("click", function() {
+        slideNumber--;
+
+        if (slideNumber <= 0) {
+            slideNumber = slideCount;
+        }
+
+        slideNumberElement.innerText = slideNumber;
+
+        const activeSlide = mainSliderBlock.querySelector('.active-slide');
+        activeSlide.classList.remove('active-slide');
+
+        if (activeSlide.previousElementSibling) {
+            activeSlide.previousElementSibling.classList.add('active-slide');
+        } else {
+            mainSliderBlock.querySelectorAll('.slide')[slideCount-1].classList.add('active-slide');
+        }
+    });
+
+    slideCountElement.innerText = slideCount;
+}
+
+// Закрыть модальное окно
+function closeModalWindow() {
+    document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('.modal').style.display = 'none';
+
+    const orderForm = document.querySelector('.modal .order-form');
+    const getPrice = document.querySelector('.modal .get-price');
+    const showImage = document.querySelector('.modal .show-original-image');
+
+    if (orderForm) {
+        orderForm.style.display = 'none';
+    }
+
+    if (getPrice) {
+        getPrice.style.display = 'none';
+    }
+
+    if (showImage) {
+        showImage.style.display = 'none';
+    }
+}
+
+// Оставить заявку
+function openModalOrder() {
+    const buttons = document.querySelectorAll('.open-modal-order');
+
+    buttons.forEach(function (item) {
+        item.addEventListener("click", function(){
+            document.querySelector('body').style.overflow = 'hidden';
+            document.querySelector('.modal .order-form').style.display = 'block';
+            document.querySelector('.modal').style.display = 'block';
+        });
+    });
+}
+
+// Запросить цену
+function openModalGetPrice() {
+    const buttons = document.querySelectorAll('.request-price');
+
+    buttons.forEach(function (item) {
+        item.addEventListener("click", function(){
+            document.querySelector('body').style.overflow = 'hidden';
+            document.querySelector('.modal .get-price').style.display = 'block';
+            document.querySelector('.modal').style.display = 'block';
+        });
+    });
+}
+
+
+// Увеличить изображение
+function zoom() {
+    const zoomImages = document.querySelectorAll('.zoom'); 
+    if (!zoomImages) {
+        return;
+    }
+
+    zoomImages.forEach(function (item) {
+       item.addEventListener('click', function () {
+           const srcImage = item.nextElementSibling.querySelector('img').getAttribute('src');
+           const description = item.nextElementSibling.nextElementSibling.innerHTML;
+           document.querySelector('.original-image img').setAttribute('src', srcImage);
+           document.querySelector('.original-image img').setAttribute('alt', description);
+           document.querySelector('.original-image span').innerHTML = description;
+
+           document.querySelector('body').style.overflow = 'hidden';
+           document.querySelector('.modal .show-original-image').style.display = 'block';
+           document.querySelector('.modal').style.display = 'block';
+       }) 
+    });
+    
+}
+
+
+// Слайдер с миниатюрами
+function sliderClassic() {
+    const sliderBlock = document.querySelector('.slider-classic');
+    if (!sliderBlock) {
+        return;
+    }
+
+    const mainImage = sliderBlock.querySelector('.main img');
+    const prev = sliderBlock.querySelector('.controls .prev');
+    const next = sliderBlock.querySelector('.controls .next');
+
+    const thumbs = sliderBlock.querySelectorAll('.thumb');
+
+    thumbs.forEach(function (thumb) {
+        thumb.addEventListener('click', function () {
+            changeActiveElement(thumbs, sliderBlock, mainImage, this, null, false);
+        })
+    });
+
+    prev.addEventListener('click', function () {
+        changeActiveElement(thumbs, sliderBlock, mainImage, null, false);
+    });
+
+    next.addEventListener('click', function () {
+        changeActiveElement(thumbs, sliderBlock, mainImage, null, true);
+    });
+}
+
+
+function changeActiveElement(thumbs, sliderBlock, mainImage, clickThumb, next) {
+    const activeSlide = sliderBlock.querySelector('.thumbs .active');
+    let newElement;
+
+    if (clickThumb) {
+        newElement = clickThumb;
+    } else {
+        newElement = next ? activeSlide.nextElementSibling : activeSlide.previousElementSibling;
+
+        if (!newElement && next) {
+            newElement = thumbs[0];
+        } else if (!newElement) {
+            newElement = thumbs[thumbs.length-1];
+        }
+    }
+
+    const src = newElement.querySelector('img').getAttribute('src');
+    mainImage.classList.add('slide_hide');
+    mainImage.classList.remove('slide_visible');
+
+    // анимация
+    setTimeout(function(){
+        mainImage.classList.add('slide_visible');
+        mainImage.setAttribute('src', src);
+    }, 200);
+
+    activeSlide.classList.remove('active');
+    newElement.classList.add('active');
+}
+
+function citySelectBlock(e, link) {
+    e.preventDefault();
+
+    const left = link.offsetLeft;
+    const citySelectBlock = document.querySelector('.city-select');
+
+    if (citySelectBlock && citySelectBlock.style.display !== 'block') {
+        citySelectBlock.style.display = 'block';
+        citySelectBlock.style.left = `${left}px`;
+    } else if (citySelectBlock) {
+        citySelectBlock.style.display = 'none';
+        citySelectBlock.style.left = `0px`;
+    }
+}
+
+
+
+
+
+$(document).ready(function(){   
+    
+    
+
+    
+});
+  
+  
