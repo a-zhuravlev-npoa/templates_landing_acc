@@ -9,8 +9,8 @@
             </div>
         </div>
         <div class="order-form">
-            <div class="close" onclick="closeModalWindow();"></div>
-            <form id="callback_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;callback_form&#39;);">
+            <div class="close" onclick="closeModalWindow();" id="btn_modal_order_close"></div>
+            <form id="callback_form" action="javascript:void(null);" onsubmit="send_form_order('callback_form','#btn_modal_order_close');">
                 <input type="hidden" name="type" value="Онлайн-заявка" id="order_prod_form_type">
                 <input type="hidden" name="form_type" value="callback_form">
                 <input type="hidden" name="product_name" id="order_prod_form_name" value="">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="center">
-                    <button onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;online_zayavka&#39;, &#39;zakaz&#39;);)">Оставить заявку</button>
+                    <button>Оставить заявку</button>
                 </div>
 				<div class="center">
                    <input type="checkbox" id="agree-pod3" name="agree-pod3" required=""><label for="agree-pod">Нажимая кнопку вы даёте согласие на обработку <a href="https://atomss.ru/menu/popd/">персональных данных</a></label> 
@@ -306,7 +306,7 @@
   <div class="modal-dialog modal-dialog-centered modal-md">
     <div class="modal-content">     
       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="icon"><use xlink:href="#close-ico"></use></svg></button>
-      <form id="complaint_form" action="javascript:void(null);" onsubmit="send_form_order(&#39;complaint_form&#39;);">
+      <form id="complaint_form" action="javascript:void(null);" onsubmit="send_form_order('complaint_form');">
 		<input type="hidden" name="type" value="Жалоба">
 		<input type="hidden" name="form_type" value="complaint_form">
 		<input type="hidden" name="link_page" value="/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/">

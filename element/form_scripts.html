@@ -52,7 +52,7 @@
                     $(btn_modal_thx).click(); 
                 }
                 else{
-                    location.href = href_thx;
+                    setTimeout(function(){ alert('Спасибо за заявку! В ближайшее время наши менеджеры свяжутся с Вами');},500);
                 }
                 postData("{% url 'checkout:clear_order_number' %}");
 
