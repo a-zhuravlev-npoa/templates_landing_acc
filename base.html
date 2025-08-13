@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">     
+
+    <link href="{{ static_url }}css/style.css" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">      
+    <title>{% block title_page %}{% endblock %}</title>
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}"/>
+    <meta name="description" content="{% block meta_description %}{% endblock %}"/>
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="{{ project_settings.name|safe }}">
+    <meta property="og:title" content="{% block title_page_og %}{% endblock %}"/>
+    <meta property="og:description" content="{% block meta_description_og %}{% endblock %}"/>
+    <meta property="og:image" content="{{ media_url }}{{ current_menu.image }}"/>
+    <meta property="og:image:alt" content="{{ current_menu.name }}">
+    <meta property="og:type" content="website"/>
+    {% block canonical_head %}
+        {% if current_menu %}
+            <link rel="canonical" href="{{ request.scheme }}://{{ request.get_host }}{{ current_menu.get_absolute_url }}"/>
+        {% endif %}
+    {% endblock %}
+
+    {% if not debug %}
+        {% if current_filial.text_head_filial %}{{ current_filial.text_head_filial|safe }}{% endif %}
+        {% if project_settings.text_head %}{{ project_settings.text_head|safe }}{% endif %}
+    {% endif %}
+  </head>
+  <body {% block body_class_page %}{% endblock %}>
+    {% block site_wrapper %}{% endblock %}
+
+    <script src="{{ static_url }}js/jquery.min.js"></script>
+    {% block extra_scripts %}{% endblock %}
+    {% include 'element/form_scripts.html' %}
+    {% if not debug %}
+        {% if current_filial.text_body_filial %}{{ current_filial.text_body_filial|safe }}{% endif %}
+        {% if project_settings.text_body %}{{ project_settings.text_body|safe }}{% endif %}
+    {% endif %}
+  </body>
+</html>
+
+

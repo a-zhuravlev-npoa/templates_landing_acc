@@ -1,0 +1,99 @@
+{% extends "site_wrapper.html" %}
+{% load nospaces %}
+{% load catalog_tags %}
+{% block meta_description %}{% nospaces %}
+    {{ page_meta_description }}
+{% endnospaces %}{% endblock %}
+{% block meta_description_og %}{% nospaces %}
+    {{ page_meta_description }}
+{% endnospaces %}{% endblock %}
+{% block meta_keywords %}{% nospaces %}
+    {{ page_meta_keywords }}
+{% endnospaces %}{% endblock %}
+{% block title_page %}{% nospaces %}
+    {{ page_title }}
+{% endnospaces %}{% endblock %}
+{% block title_page_og %}{% nospaces %}
+    {{ page_title }}
+{% endnospaces %}{% endblock %}
+{% block content %}
+    <!-- main -->
+    <main role="main">
+        <div class="container">
+            <div class="headline">
+            <h1>{{ page_h1 }}</h1>
+            <div class="numbers">9<span>лет<br>на рынке</span></div>
+            </div>
+            <div class="row intro">
+            <div class="sidebar">
+                <div class="main-img">
+                    {% if product.photo %}<img src="{{ media_url }}{{ product.photo }}" alt="{{ product.name }}">{% endif %}
+                </div>
+            </div>
+            <div class="content">
+                <h2>Размеры и характеристики:</h2>
+                <ul class="parametr">
+                    {% if current_menu.label_param1 and product.param_1 %}<li><span>{{ current_menu.label_param1 }}</span>{{ product.param_1 }}</li>{% endif %}
+                    {% if current_menu.label_param2 and product.param_2 %}<li><span>{{ current_menu.label_param2 }}</span>{{ product.param_2 }}</li>{% endif %}
+                    {% if current_menu.label_param3 and product.param_3 %}<li><span>{{ current_menu.label_param3 }}</span>{{ product.param_3 }}</li>{% endif %}
+                    {% if current_menu.label_param4 and product.param_4 %}<li><span>{{ current_menu.label_param4 }}</span>{{ product.param_4 }}</li>{% endif %}
+                    {% if current_menu.label_param5 and product.param_5 %}<li><span>{{ current_menu.label_param5 }}</span>{{ product.param_5 }}</li>{% endif %}
+                    {% if current_menu.label_param6 and product.param_6 %}<li><span>{{ current_menu.label_param6 }}</span>{{ product.param_6 }}</li>{% endif %}
+                    {% if current_menu.label_param7 and product.param_7 %}<li><span>{{ current_menu.label_param7 }}</span>{{ product.param_7 }}</li>{% endif %}
+                    {% if current_menu.label_param8 and product.param_8 %}<li><span>{{ current_menu.label_param8 }}</span>{{ product.param_8 }}</li>{% endif %}
+                    {% if current_menu.label_param9 and product.param_9 %}<li><span>{{ current_menu.label_param9 }}</span>{{ product.param_9 }}</li>{% endif %}
+                    {% if current_menu.label_param10 and product.param_10 %}<li><span>{{ current_menu.label_param10 }}</span>{{ product.param_10 }}</li>{% endif %}
+                    {% if current_menu.label_param11 and product.param_11 %}<li><span>{{ current_menu.label_param11 }}</span>{{ product.param_11 }}</li>{% endif %}
+                    {% if current_menu.label_param12 and product.param_12 %}<li><span>{{ current_menu.label_param12 }}</span>{{ product.param_12 }}</li>{% endif %}
+                    {% if current_menu.label_param13 and product.param_13 %}<li><span>{{ current_menu.label_param13 }}</span>{{ product.param_13 }}</li>{% endif %}
+                    {% if current_menu.label_param14 and product.param_14 %}<li><span>{{ current_menu.label_param14 }}</span>{{ product.param_14 }}</li>{% endif %}
+                    {% if current_menu.label_param15 and product.param_15 %}<li><span>{{ current_menu.label_param15 }}</span>{{ product.param_15 }}</li>{% endif %}
+                </ul>
+                <div class="form" id="form">
+                <div class="form-title">Заказать</div>
+                <div class="form-price">{{ product.get_price }}</div>
+                <form action="javascript:void(null);" id="order_modal" onsubmit="send_form_order('order_modal', null, null, '/');">
+                    <input type="hidden" name="type" value="Заказ">
+                    <input type="hidden" name="product_name" value="Труба"> 
+                    <input type="hidden" name="link_page" value="{{ request.path }}">
+                    <input type="hidden" name="utm_source" value="">
+                    <input type="hidden" name="utm_medium" value="">
+                    <input type="hidden" name="utm_campaign" value="">
+                    <input type="hidden" name="utm_content" value="">
+                    <input type="hidden" name="utm_term" value="">
+                    <div class="form__inner">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Имя" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Телефон" required class="form-control">
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                    </div>
+                </form>
+                </div>
+                <div class="more__link">
+                <a href="{{ catalog_url }}">Весь каталог<svg class="icon"><use xlink:href="#arw"></use></svg></a>
+                </div>
+            </div>            
+            </div>
+            <ol class="plus">
+            <li>ЕСТЬ СОМНЕНИЯ<br>В КАЧЕСТВЕ ПРОДУКЦИИ?<br>МЫ ДАЁМ ГАРАНТИИ.</li>
+            <li>НЕ ГОТОВЫ ПЛАТИТЬ СЕГОДНЯ?<br>У НАС ЕСТЬ ВЫГОДНАЯ<br>СИСТЕМА ОТСРОЧЕК ПЛАТЕЖА</li>
+            <li>200 специалистов<br>в разных<br>часовых поясах</li>
+            </ol>
+            <div class="row text">
+                <div class="content">{{ page_text }} 123</div>
+                <div class="sidebar">
+                    <h2>Сервисные услуги</h2>
+                    <ul class="side__menu">
+                        {% for item in current_menu.block_relate_catalog.all %}
+                            <li><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>    
+        </div>
+    </main>      
+    <!--/ main -->  
+{% endblock %}

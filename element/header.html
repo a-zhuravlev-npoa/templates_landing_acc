@@ -1,0 +1,34 @@
+<!-- header -->
+<div class="panel">
+    <div class="container">
+      <address>
+        <svg class="icon"><use xlink:href="#pin"></use></svg>
+        <span>{{ current_filial.postal_code }}, {{ current_filial.address|safe }}
+      </address>
+      <div class="time">
+        <svg class="icon"><use xlink:href="#time"></use></svg>
+        {{ current_filial.rezhim }}
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="/"><img src="{{ static_url }}img/logo.svg" alt=""></a>
+      </div>
+      <div class="inner">
+        <div class="h__group_in">
+          <div class="h__group">
+            <a href="tel:{{ current_filial.phone_href }}">{{ current_filial.phone }}</a>
+            <span>Горячая линия</span>
+          </div>
+          <div class="h__group">
+            <a href="mail:{{ current_filial.email }}">{{ current_filial.email }}</a>
+            <span>Электронная почта</span>
+          </div>
+        </div>
+        <a href="#form" class="btn">Заказать звонок</a>
+      </div>
+    </div>
+</header>
+<!--/ header -->
