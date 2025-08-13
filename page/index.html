@@ -30,7 +30,8 @@
 
 
                     <section class="h1">
-                        <h1>Конструкционная плита  в <a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/#" onclick="citySelectBlock(event, this);">Москве</a></h1>
+                        <h1>{{ current_menu.name }}  
+                            {% comment %} в <a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/#" onclick="citySelectBlock(event, this);">Москве</a></h1>
                         <div class="city-select">
                             <ul>
                               
@@ -45,754 +46,74 @@
                                   <li><a href="https://spb.atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/" rel="nofollow">Санкт-Петербург</a></li>
                               
                             </ul>
-                        </div>
+                        </div> {% endcomment %}
                     </section>
 
                     <div class="catalog">
                         <div class="info">
 
-                            <div class="{{ static_url }}img">
-                              <img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt="Плита">
+                            <div class="img">
+                              <img src="{{ media_url }}{{ current_menu.image }}" alt="{{ current_menu.name }}">
                             </div>
 
                             <div class="text">
                               <div class="delivery">
-                                <p><strong>Доставка</strong></p>
-                                <p>
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                </p>
-                                <p>                                      
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                </p>
-                                <p>
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                  Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.
-                                </p>
+                                {{ current_menu.text_short|safe }}
                               </div>                                
                             </div>
-
                         </div>
-                                            
-
-
                         <!-- NEW -->
                         <div class="card-list">
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>
-                                <li>Вид: магистральная</li>
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная название в две строки
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>                                
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>                                
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>
-                                <li>Вид: магистральная</li>
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>
-                                <li>Вид: магистральная</li>
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>
-                                <li>Вид: магистральная</li>
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная название в две строки
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>                                
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>                                
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>
-                                <li>Вид: магистральная</li>
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-head">
-                              <div class="card-img"><img src="{{ static_url }}img/zaglushka-na-kartinki.webp" alt=""></div>
-                              <div class="card-inf">
-                                <div class="card-status in-stock">В наличии</div>
-                                <div class="card-price">От 24431 <span>₽</span></div>
-                                <div class="card-price-inf">Цена от 04.07.2025</div>
-                              </div>
-                            </div>
-                            <div class="card-body">
-                              <div class="card-title">
-                                Труба оцинкованная
-                              </div>
-                              <ul>
-                                <li>Наружный диаметр: 325</li>
-                                <li>Диаметр: 12</li>
-                                <li>Марка: Ст3Гпс</li>
-                                <li>ГОСТ: ГОСТ 9.307-2021</li>
-                                <li>Вид: магистральная</li>
-                              </ul>
-                              <div class="card-full" 
-                                data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
-                                Читать описание
-                              </div>
-                            </div>
-                            <div class="card-foot">
-                              <button class="card-btn">Уточнить цену</button>
-                              <button class="buy-btn"></button>
-                            </div>
-                          </div>
+                            {% for item in current_menu.get_products %}
+                                {% if forloop.counter <= 20 %}
+                                    <div class="card">
+                                        <div class="card-head">
+                                        <div class="card-img"><img src="{{ media_url }}{{ item.image }}" alt="{{ item.name }}"></div>
+                                        <div class="card-inf">
+                                            <div class="card-status in-stock">В наличии</div>
+                                            <div class="card-price">{{ item.get_price }}</div>
+                                            <div class="card-price-inf">Цена от {{ date_before|date:"d.m.Y" }}</div>
+                                        </div>
+                                        </div>
+                                        <div class="card-body">
+                                        <div class="card-title">
+                                            {{ item.name }}
+                                        </div>
+                                        <ul>
+                                            {% if current_menu.label_param1 and product.param_1 %}<li>{{ current_menu.label_param1 }}: {{ product.param_1 }}</li>{% endif %}
+                                            {% if current_menu.label_param2 and product.param_2 %}<li>{{ current_menu.label_param2 }}: {{ product.param_2 }}</li>{% endif %}
+                                            {% if current_menu.label_param3 and product.param_3 %}<li>{{ current_menu.label_param3 }}: {{ product.param_3 }}</li>{% endif %}
+                                            {% if current_menu.label_param4 and product.param_4 %}<li>{{ current_menu.label_param4 }}: {{ product.param_4 }}</li>{% endif %}
+                                            {% if current_menu.label_param5 and product.param_5 %}<li>{{ current_menu.label_param5 }}: {{ product.param_5 }}</li>{% endif %}
+                                            {% if current_menu.label_param6 and product.param_6 %}<li>{{ current_menu.label_param6 }}: {{ product.param_6 }}</li>{% endif %}
+                                            {% if current_menu.label_param7 and product.param_7 %}<li>{{ current_menu.label_param7 }}: {{ product.param_7 }}</li>{% endif %}
+                                            {% if current_menu.label_param8 and product.param_8 %}<li>{{ current_menu.label_param8 }}: {{ product.param_8 }}</li>{% endif %}
+                                            {% if current_menu.label_param9 and product.param_9 %}<li>{{ current_menu.label_param9 }}: {{ product.param_9 }}</li>{% endif %}
+                                            {% if current_menu.label_param10 and product.param_10 %}<li>{{ current_menu.label_param10 }}: {{ product.param_10 }}</li>{% endif %}
+                                            {% if current_menu.label_param11 and product.param_11 %}<li>{{ current_menu.label_param11 }}: {{ product.param_11 }}</li>{% endif %}
+                                            {% if current_menu.label_param12 and product.param_12 %}<li>{{ current_menu.label_param12 }}: {{ product.param_12 }}</li>{% endif %}
+                                            {% if current_menu.label_param13 and product.param_13 %}<li>{{ current_menu.label_param13 }}: {{ product.param_13 }}</li>{% endif %}
+                                            {% if current_menu.label_param14 and product.param_14 %}<li>{{ current_menu.label_param14 }}: {{ product.param_14 }}</li>{% endif %}
+                                            {% if current_menu.label_param15 and product.param_15 %}<li>{{ current_menu.label_param15 }}: {{ product.param_15 }}</li>{% endif %}
+                                        </ul>
+                                        <div class="card-full" 
+                                            data-tooltip="Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями. Мы осуществляем доставку в Москве, а также по всей России и СНГ в кратчайшие сроки. Скидка 15%! Сотрудничаем с «Деловыми линиями» и другими транспортными компаниями.">
+                                            Читать описание
+                                        </div>
+                                        </div>
+                                        <div class="card-foot">
+                                        <button class="card-btn">Уточнить цену</button>
+                                        <button class="buy-btn"></button>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                         <!--/ NEW -->
-
-
-                        
-
-                        
-                        <!-- pagination -->                        
-                        <div class="pagination">
-                            <div class="title">Страницы: </div>
-                            <div class="pages">
-                              
-                                
-                                  
-                                    
-                                        <div class="active">1</div>
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/2/">2</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/3/">3</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/4/">4</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/5/">5</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/6/">6</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/7/">7</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/8/">8</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/9/">9</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                              
-                                
-                                  
-
-                                      <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/#">...</a></div>
-                                  
-                                    
-                                          
-                                            <div><a href="https://atomss.ru/catalog/specialnye-stali-i-splavy/plita-iz-konstrukcionnoj-stali/page/149/">149</a></div>
-                                          
-                                    
-                                    
-                                
-                              
-                            </div>
-                        </div>                                            
-                        <!-- / pagination -->
-
-                       
-
                     </div>
-                     <h2>Плиты из конструкционной стали: описание и применение</h2>
-<h4>Описание:</h4>
-<h4><span style="font-size: 9.0pt; color: #525252; mso-themecolor: accent3; mso-themeshade: 128; font-weight: normal; mso-bidi-font-weight: bold;">Плиты из констукционной стали – это разновидность листового проката, собственно толстолистовой прокат с равномерной толщиной. Производят плиты из высококачественной кнструкционной стали с добавлением легирующих элементов, в первую очередь углерода, а также таких элементов, как медь, марганец, кремний, фосфор, сера и так далее. Благодаря данным добавкам, готовый металлургический продукт обладает повышенными показателями прочности, ударной вязкости, пластичности, а также стойкости к коррозии и низким температурам.</span></h4>
-<h4><span style="font-size: 9.0pt; color: #525252; mso-themecolor: accent3; mso-themeshade: 128; font-weight: normal; mso-bidi-font-weight: bold;">Конструкционная сталь бывает нескольких видов:</span></h4>
-<h4><span style="font-size: 9.0pt; color: #525252; mso-themecolor: accent3; mso-themeshade: 128; font-weight: normal; mso-bidi-font-weight: bold;">Легированная сталь с содержанием кремния, вольфрома, молибдена, никеля, хрома и других металлов, улучшающих ее механических свойств. Легированная сталь подразделяется на легированную обычного качества, низколегированную, пружинно-рессорную, теплоустойчивую, шарикоподшипниковую.</span></h4>
-<h4><span style="font-size: 9.0pt; color: #525252; mso-themecolor: accent3; mso-themeshade: 128; font-weight: normal; mso-bidi-font-weight: bold;">Углеродистая сталь различного качества: обыкновенного качества, качественная, высококачественная и особо высоко качества. Разница состоит в процентном содержании фосфора и серы. Чем оно меньше, тем сплав качественнее. Объясняется эта зависимость очень просто – фосфор делает металл склонным к растрескиванию в процессе холодной механической обработки, а высокое содержание серы вызывает трещинообразование при горячей обработке, особенно под воздействием высокого давления. Также Углеродистую сталь подразделяют на машинную, автоматную и котельную.</span></h4>
-<h4 style="margin-top: 11.25pt; margin-right: 0cm; margin-bottom: 7.5pt; margin-left: 0cm;"><span style="font-size: 15.0pt; color: #4f4f4f;">Ассортимент толстолистового проката из конструкционных сталей:</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Конструкционная сталь на современном рынке металлопроката представлена большим разнообразием марок. Мы производим и поставляем многие из них.<br> Углеродистые: 08, 10, 20, 25, 30, 35, 40, 45, 50, 55, 58, 60, А12, А20, А30, 20К.<br> Легированные: 09Г2, 09Г2С, 0ХСНД, 17Г1С, 16Г2АФ, 10ХНДП, 15ХНДП, 0ХСНД, 15ХСНД, 12МХ, 12Х1МФ, 25Х1МФ, 25Х2М1Ф, 20Х3МВФ,15Х5М, 15ХМ, ШХ15, ШХ4, ШХ15СГ, ШХ20СГ,</span> <span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">65, 70, 75, 85, 60Г, 65Г, 55С2, 60С2, 60С2А, 70С3А, 55ХГР, 50ХФА, 60С2ХА, 60С2ХФА, 65С2ВА.</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Все конструкционные марки стали обладают особыми характеристиками:</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">способность к местным пластическим деформациям;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">высокий предел текучести;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">высокий предел прочности;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">устойчивость к деформации вследствие больших и продолжительных нагрузок;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">устойчивость к коррозии и воздействию повышенной влажности или агрессивной среды;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l0 level1 lfo1;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">отличная обрабатываемость.</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Мы производим конструкционные плиты из указанных марок стали в соответствии с ГОСТ 19903-2015. Традиционный способ производства конструкционных плит – горячая прокатка. Размерный ряд выпускаемой конструкционной толстолистовой продукции:</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l1 level1 lfo3;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">длина составляет 710 – 12000 мм;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l1 level1 lfo3;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">ширина составляет 500 – 4400 мм;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l1 level1 lfo3;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">толщина составляет 12 – 200 мм.</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Толстолистовой прокат разделяют в зависимости от точности изготовления на плиты повышенной точности (А) и плиты обычной точности (Б).</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Плоскость плит также регламентируется ГОСТом. Различают изделия:</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">- особо высокой плоскости (ПО);</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">- высокой плоскости (ПВ);</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">- улучшенной плоскости (ПУ);</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">- нормальной плоскости (ПН).</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f;"><br> </span><span style="font-size: 15.0pt; color: #4f4f4f;">Область применения:</span></h4>
-<h4><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Плиты из конструкционных марок стали применяются в качестве заготовок:</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в автомобилестроительной отрасли;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в машиностроении;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в производстве строительных конструкций, перекрытий и сооружений;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в химической отрасли;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в газовой и нефтехимической промышленности;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в металлургии в качестве полуфабрикат для производства деталей на штамповом и механообрабатывающем оборудовании;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в дорожном строительстве и мостостроении;</span></h4>
-<h4 style="margin-left: 36.0pt; text-indent: -18.0pt; mso-list: l2 level1 lfo2;"><!--[if !supportLists]--><span style="font-size: 9.0pt; font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;"><span style="mso-list: Ignore;">·<span style="font: 7.0pt &#39;Times New Roman&#39;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">в качестве настилов и оснований.</span></h4>
-<h4 style="margin-top: 11.25pt; margin-right: 0cm; margin-bottom: 7.5pt; margin-left: 0cm;"><span style="font-size: 15.0pt; color: #4f4f4f;">Что еще необходимо знать:</span></h4>
-<h4 style="margin-top: 11.25pt; margin-right: 0cm; margin-bottom: 7.5pt; margin-left: 0cm;"><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">К сожалению, конструкционные марки стали обладат не только положительными характеристиками, но и<span style="mso-spacerun: yes;">&nbsp; </span>имеют свои, зачастую весьма существенные, недостатки.</span></h4>
-<h4 style="margin-top: 11.25pt; margin-right: 0cm; margin-bottom: 7.5pt; margin-left: 0cm;"><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Склонность к дендритной ликвации и полосатости в структуре. Свойство это образуется из наличия большого процента и числа легирующих компонентов в марках конструкцтонной стали. Такие элементы повышают температурный интервал кристаллизации, из-за чего диффузные процессы в сплаве протекают медленнее. Лечится данный дефект диффузным отжигом.</span></h4>
-<h4 style="margin-top: 11.25pt; margin-right: 0cm; margin-bottom: 7.5pt; margin-left: 0cm;"><span style="font-size: 9.0pt; color: #4f4f4f; font-weight: normal; mso-bidi-font-weight: bold;">Образование флокенов (внутренних трещин). Усугубляется данный ефект тем, что флокены становятся заметны на этапе макротравления. Приводит к образованию флокенов наличие растворенного водорода в расплаве в сочетании с нарушением технологии ковки или прокатки, когда металл после данных манипуляций охлаждают слишком быстро. Образованию флокенов больше подвержены хромовые и хромоникелевые сплавы.</span></h4>
-                    
-					<h2>Купить Плита конструкционная в Москве</h2>
-					<p>В нашей компании вы сможете быстро и недорого купить Плита конструкционная. Гарантируем вам высокое качество товара, доставку в срок, а также возможность приобретения крупных партий продукции.</p>
-					<p>Помимо выгодных условий приобретения, вас ждёт отличный клиентоориентированный сервис и надёжный специалист. Он поможет выбрать подходящий товар и сопроводит сделку от начала до конца.</p>
-					<p>Принимаем заявки в рабочее время с <b>09:00-18:00</b>. После оформления заявки вам перезвонит сотрудник с готовым предложением в течении 30 минут.</p>
-					<p>Для запроса КП, уточнения цены и наличия принимаем заявки на {{ current_filial.email }} и по телефону {{ current_filial.phone }}.</p>
-                    
-
-                    <article class="text main-text-block">
-                        <h2>Только качественная продукция</h2>
-                        <p>Любой из предоставленных в каталоге товаров отвечает всем стандартам качества. Вы сможете купить изделия из цветных металлов, редких сталей и сплавов без боязни получения дефектной продукции.</p>
-                        <div class="services">
-                            <div class="delivery">
-                                <div class="info">
-                                    <p><strong>Доставка металлопроката</strong></p>
-                                    <p>Компания ООО «АТОМСПЕЦСПЛАВ» организует доставку металлопроката в любую точку Российской Федерации. Принимаем заявки в рабочее время, менеджеры отслеживают состояние перевозки. Покупайте товары оптом для получения максимальной выгоды.</p>
-                                </div>
-                            </div>
-                            <div class="cart">
-                                <div class="info">
-                                    <p><strong>Как купить металлопрокат</strong></p>
-                                    <p>Оформить заявку на приобритение товаров можно по телефону, или же отправив заявку на {{ current_filial.email }}. Так же вам доступен онлайн заказ при помощи специальных форм, находящихся в каталоге металлопроката.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-
-
+                   {{ current_menu.description|safe }}
                 </div>
             </div>
         </div>
     </main>
-    
-
 {% endblock %}
