@@ -97,7 +97,7 @@
                                             {% if current_menu.label_param15 and product.param_15 %}<li>{{ current_menu.label_param15 }}: {{ product.param_15 }}</li>{% endif %}
                                         </ul>
                                         <div class="card-full" 
-                                            data-tooltip="{{ item.description }}">
+                                            data-tooltip="{{ item.description|safe }}">
                                             Читать описание
                                         </div>
                                         </div>
