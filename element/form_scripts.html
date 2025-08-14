@@ -152,4 +152,25 @@
         var date = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000);
         document.cookie = "show_cookie_stmm_alum=True; path=/; expires=" + date.toUTCString();
     }
+
+    document.querySelectorAll('.card-full').forEach(el => {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        document.body.appendChild(tooltip);
+
+        el.addEventListener('mouseenter', () => {
+            tooltip.innerHTML = el.dataset.tooltip; 
+            tooltip.style.display = 'block';
+        });
+
+        el.addEventListener('mousemove', e => {
+            tooltip.style.left = e.pageX + 15 + 'px';
+            tooltip.style.top = e.pageY + 15 + 'px';
+        });
+
+        el.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
+    });
+
 </script>
