@@ -17,31 +17,18 @@
     <script src="{{ static_url }}index_files/js.js.завантаження" defer=""></script>
     <link rel="icon" href="https://atomss.ru/favicon.svg" type="image/svg+xml">
     
-    
-        <meta name="description" content="Купить Плита конструкционная в Москве, скидка на доставку 12%. Звоните по телефону +7 (495) 137-66-05">
-        <meta name="keywords" content="Плита конструкционная купить, Плита конструкционная Москва, Плита конструкционная цена, Плита конструкционная от поставщика">
-        <title>Плита конструкционная купить в Москве — ООО Атомспецсплав</title>
-	
-<!--og meta-->
+    <title>{% block title_page %}{% endblock %}</title>
+
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}"/>
+    <meta name="description" content="{% block meta_description %}{% endblock %}"/>
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="
-    
-              
-                
-                  Плита конструкционная купить в Москве — ООО Атомспецсплав
-                
-              
-            
-        ">
-    <meta property="og:site_name" content="ООО Атомспецсплав">
-    <meta property="og:url" content="https://atomss.ru/catalog/specialnye-stali-i-splavy/">
-    <meta property="og:image" content="/media/uploads/images/logo.png">
-    <meta property="og:image:alt" content="ООО АтомСпецСплав">
-    <meta property="og:description" content="
-                  Купить Плита конструкционная в Москве, скидка на доставку 12%. Звоните по телефону +7 (495) 137-66-05
-                ">
-<!--og meta-->	
+    <meta property="og:site_name" content="{{ project_settings.name|safe }}">
+    <meta property="og:title" content="{% block title_page_og %}{% endblock %}"/>
+    <meta property="og:description" content="{% block meta_description_og %}{% endblock %}"/>
+    <meta property="og:image" content="{{ media_url }}{{ current_menu.image }}"/>
+    <meta property="og:image:alt" content="{{ current_menu.name }}">
+    <meta property="og:type" content="website"/>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
